@@ -1,0 +1,15 @@
+# Environment variables — NE PAS COMMITTER
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Dependencies
+node_modules/
