@@ -30,3 +30,15 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
     showError('Connection error. Please try again.');
   }
 });
+
+function showError(message) {
+  const errorEl = document.getElementById('error-message');
+  errorEl.textContent = message;
+  errorEl.classList.remove('hidden');
+}
+
+function clearError() {
+  const errorEl = document.getElementById('error-message');
+  errorEl.textContent = '';
+  errorEl.classList.add('hidden');
+}
