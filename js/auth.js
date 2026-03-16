@@ -7,4 +7,26 @@ document.getElementById('login-form').addEventListener('submit', async (e) => {
   const password = document.getElementById('password').value;
 
   clearError();
+
+  const credentials = btoa(`${identifier}:${password}`);
+
+  try {
+    const response = await fetch(SIGNIN_URL, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Basic ${credentials}`,
+      },
+    });
+
+    if (!response.ok) {
+      showError('Invalid credentials. Please try again.');
+      return;
+    }
+
+    const token = await response.json();
+    localStorage.setItem('jwt', token);
+    window.location.href = 'profile.html';
+  } catch (err) {
+    showError('Connection error. Please try again.');
+  }
 });
