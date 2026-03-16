@@ -11,10 +11,10 @@
 |--------|-------|-------|
 | ✅     | 1h    | Mise en place du projet (structure HTML/CSS/JS, repo, .gitignore) |
 | ✅     | 1.5h  | Page de login — UI (formulaire username/email + password) |
-| ⬜     | 2h    | Implémentation JWT : POST `/api/auth/signin`, encodage Basic base64 |
-| ⬜     | 1h    | Gestion des erreurs (credentials invalides → message approprié) |
-| ⬜     | 1h    | Redirection vers la page de profil après login réussi |
-| ⬜     | 0.5h  | Bouton / fonctionnalité de logout (suppression du JWT) |
+| ✅     | 2h    | Implémentation JWT : POST `/api/auth/signin`, encodage Basic base64 |
+| ✅     | 1h    | Gestion des erreurs (credentials invalides → message approprié) |
+| ✅     | 1h    | Redirection vers la page de profil après login réussi |
+| ✅     | 0.5h  | Bouton / fonctionnalité de logout (suppression du JWT) |
 
 **Objectif de fin de journée :** Login fonctionnel, JWT récupéré et stocké, logout opérationnel.
 
