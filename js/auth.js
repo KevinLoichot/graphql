@@ -42,3 +42,8 @@ function clearError() {
   errorEl.textContent = '';
   errorEl.classList.add('hidden');
 }
+
+function logout() {
+  localStorage.removeItem('jwt');
+  window.location.href = 'index.html';
+}
