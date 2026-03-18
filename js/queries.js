@@ -22,12 +22,15 @@ async function graphqlQuery(query, variables = {}) {
   return result.data;
 }
 
-// Normal query — fetch authenticated user id and login
+// Normal query — fetch authenticated user info including audit data
 async function getUser() {
   const query = `{
     user {
       id
       login
+      auditRatio
+      totalUp
+      totalDown
     }
   }`;
 
