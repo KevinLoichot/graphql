@@ -28,8 +28,8 @@
 | ✅     | 1h    | Requête normale : infos utilisateur (`user { id login }`) |
 | ✅     | 1h    | Requête imbriquée (nested) : ex. `result { id user { id login } }` |
 | ✅     | 1h    | Requête avec arguments : ex. `object(where: { id: { _eq: ... } })` |
-| ⬜     | 2h    | Page profil — layout des 3 sections d'info (XP, audits, grades) |
-| ⬜     | 1h    | Branchement des données GraphQL sur les sections |
+| ✅     | 2h    | Page profil — layout des 3 sections d'info (XP, audits, grades) |
+| ✅     | 1h    | Branchement des données GraphQL sur les sections |
 
 **Objectif de fin de journée :** Profil affiché avec 3 sections remplies de vraies données. Les 3 types de requêtes GraphQL couverts.
 
@@ -37,12 +37,12 @@
 
 ## Jour 3 — 18 mars (Graphiques SVG)
 
-| Durée | Tâche |
-|-------|-------|
-| 0.5h  | Choix et planification des 2 graphiques (ex : XP over time + XP par projet) |
-| 2.5h  | Graphique 1 : XP gagné sur une période (courbe/aire en SVG) |
-| 2.5h  | Graphique 2 : XP par projet ou ratio audit (barres en SVG) |
-| 1.5h  | Intégration des graphiques dans la page profil, responsivité basique |
+| Statut | Durée | Tâche |
+|--------|-------|-------|
+| ✅     | 0.5h  | Choix et planification des 2 graphiques (ex : XP over time + XP par projet) |
+| ✅     | 2.5h  | Graphique 1 : XP gagné sur une période (courbe/aire en SVG) |
+| ✅     | 2.5h  | Graphique 2 : XP par projet ou ratio audit (barres en SVG) |
+| ✅     | 1.5h  | Intégration des graphiques dans la page profil, responsivité basique |
 
 **Objectif de fin de journée :** 2 graphiques SVG fonctionnels et affichant des données réelles.
 
@@ -50,13 +50,13 @@
 
 ## Jour 4 — 19 mars (UI/UX + Hébergement)
 
-| Durée | Tâche |
-|-------|-------|
-| 2h    | Amélioration UI/UX (typographie, couleurs, mise en page, responsive) |
-| 1h    | Tests de toutes les questions d'audit (fonctionnel + général) |
-| 0.5h  | Correction des bugs identifiés lors des tests |
-| 2h    | Hébergement (GitHub Pages ou Netlify) + configuration du domaine |
-| 1.5h  | Tests finaux sur le domaine hébergé (accès, login, profil, graphiques) |
+| Statut | Durée | Tâche |
+|--------|-------|-------|
+| ⬜     | 2h    | Amélioration UI/UX (typographie, couleurs, mise en page, responsive) |
+| ⬜     | 1h    | Tests de toutes les questions d'audit (fonctionnel + général) |
+| ⬜     | 0.5h  | Correction des bugs identifiés lors des tests |
+| ⬜     | 2h    | Hébergement (GitHub Pages ou Netlify) + configuration du domaine |
+| ⬜     | 1.5h  | Tests finaux sur le domaine hébergé (accès, login, profil, graphiques) |
 
 **Objectif de fin de journée :** Site en ligne, toutes les questions d'audit validées.
 
@@ -64,12 +64,12 @@
 
 ## Jour 5 — 20 mars (Bonus — optionnel)
 
-| Durée | Tâche |
-|-------|-------|
-| 1.5h  | Section(s) supplémentaire(s) au-delà des 3 obligatoires |
-| 2h    | Graphique(s) supplémentaire(s) (ex : ratio PASS/FAIL, tentatives par exercice) |
-| 2h    | Création et intégration d'un GraphiQL maison |
-| 1.5h  | Finitions UI, animations SVG, polish général |
+| Statut | Durée | Tâche |
+|--------|-------|-------|
+| ⬜     | 1.5h  | Section(s) supplémentaire(s) au-delà des 3 obligatoires |
+| ⬜     | 2h    | Graphique(s) supplémentaire(s) (ex : ratio PASS/FAIL, tentatives par exercice) |
+| ⬜     | 2h    | Création et intégration d'un GraphiQL maison |
+| ⬜     | 1.5h  | Finitions UI, animations SVG, polish général |
 
 **Objectif de fin de journée :** Bonus cochés, UI soignée.
 
