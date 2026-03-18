@@ -6,7 +6,8 @@ const SIGNIN_URL = 'https://zone01normandie.org/api/auth/signin';
   Encodes credentials in base64, sends a POST request with Basic auth.
   Stores the JWT in localStorage and redirects to the profile page on success.
 */
-document.getElementById('login-form').addEventListener('submit', async (e) => {
+const loginForm = document.getElementById('login-form');
+if (loginForm) loginForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const identifier = document.getElementById('identifier').value.trim();
