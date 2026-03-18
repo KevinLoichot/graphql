@@ -52,7 +52,7 @@
 
 | Statut | Durée | Tâche |
 |--------|-------|-------|
-| ⬜     | 2h    | Amélioration UI/UX (typographie, couleurs, mise en page, responsive) |
+| ✅     | 2h    | Amélioration UI/UX (typographie, couleurs, mise en page, responsive) |
 | ⬜     | 1h    | Tests de toutes les questions d'audit (fonctionnel + général) |
 | ⬜     | 0.5h  | Correction des bugs identifiés lors des tests |
 | ⬜     | 2h    | Hébergement (GitHub Pages ou Netlify) + configuration du domaine |
