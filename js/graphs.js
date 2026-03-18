@@ -1,3 +1,4 @@
+// Create and return a base SVG element with the given dimensions
 function createSVG(width, height) {
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('width', width);
@@ -6,6 +7,10 @@ function createSVG(width, height) {
   return svg;
 }
 
+/*
+  Render a cumulative XP over time line chart.
+  Sorts transactions by date, accumulates XP, then draws a polyline.
+*/
 function renderXPOverTime(transactions) {
   const width = 600;
   const height = 300;
@@ -13,6 +18,7 @@ function renderXPOverTime(transactions) {
 
   const sorted = [...transactions].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
 
+  // Build cumulative XP points
   let cumulative = 0;
   const points = sorted.map((t) => {
     cumulative += t.amount;
@@ -23,6 +29,7 @@ function renderXPOverTime(transactions) {
   const maxDate = points[points.length - 1].date.getTime();
   const maxXP = points[points.length - 1].xp;
 
+  // Scale functions to map data values to SVG coordinates
   const scaleX = (date) => padding + ((date.getTime() - minDate) / (maxDate - minDate)) * (width - padding * 2);
   const scaleY = (xp) => height - padding - (xp / maxXP) * (height - padding * 2);
 
@@ -40,11 +47,16 @@ function renderXPOverTime(transactions) {
   section.appendChild(svg);
 }
 
+/*
+  Render a bar chart of XP earned per project.
+  Groups transactions by project name, sorts by XP descending, shows top 10.
+*/
 function renderXPByProject(transactions) {
   const width = 600;
   const height = 300;
   const padding = 40;
 
+  // Group XP by project name
   const byProject = {};
   transactions.forEach((t) => {
     const name = t.object ? t.object.name : 'unknown';
@@ -69,6 +81,7 @@ function renderXPByProject(transactions) {
     rect.setAttribute('height', barHeight);
     rect.setAttribute('fill', '#f0f0f0');
 
+    // Project name label below the bar
     const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
     label.setAttribute('x', x + barWidth / 2);
     label.setAttribute('y', height - padding + 14);
