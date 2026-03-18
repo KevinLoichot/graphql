@@ -22,14 +22,14 @@
 
 ## Jour 2 — 17 mars (GraphQL + Sections profil)
 
-| Durée | Tâche |
-|-------|-------|
-| 1h    | Mise en place du client GraphQL (fetch + Bearer token) |
-| 1h    | Requête normale : infos utilisateur (`user { id login }`) |
-| 1h    | Requête imbriquée (nested) : ex. `result { id user { id login } }` |
-| 1h    | Requête avec arguments : ex. `object(where: { id: { _eq: ... } })` |
-| 2h    | Page profil — layout des 3 sections d'info (XP, audits, grades) |
-| 1h    | Branchement des données GraphQL sur les sections |
+| Statut | Durée | Tâche |
+|--------|-------|-------|
+| ✅     | 1h    | Mise en place du client GraphQL (fetch + Bearer token) |
+| ✅     | 1h    | Requête normale : infos utilisateur (`user { id login }`) |
+| ✅     | 1h    | Requête imbriquée (nested) : ex. `result { id user { id login } }` |
+| ✅     | 1h    | Requête avec arguments : ex. `object(where: { id: { _eq: ... } })` |
+| ⬜     | 2h    | Page profil — layout des 3 sections d'info (XP, audits, grades) |
+| ⬜     | 1h    | Branchement des données GraphQL sur les sections |
 
 **Objectif de fin de journée :** Profil affiché avec 3 sections remplies de vraies données. Les 3 types de requêtes GraphQL couverts.
 
