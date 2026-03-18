@@ -43,6 +43,7 @@ async function getXP() {
     transaction(where: { type: { _eq: "xp" } }) {
       amount
       createdAt
+      objectId
       object {
         name
       }

@@ -49,6 +49,12 @@ async function init() {
   renderXP(xpData.transaction);
   renderXPOverTime(xpData.transaction);
   renderXPByProject(xpData.transaction);
+
+  // Use query with arguments to fetch the first project object
+  if (xpData.transaction.length > 0) {
+    const firstObjectId = xpData.transaction[0].objectId;
+    await getObjectById(firstObjectId);
+  }
 }
 
 init();
