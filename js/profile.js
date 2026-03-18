@@ -40,3 +40,5 @@ async function init() {
   const xpData = await getXP();
   renderXP(xpData.transaction);
 }
+
+init();
