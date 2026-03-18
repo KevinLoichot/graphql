@@ -41,7 +41,7 @@ function renderXPOverTime(transactions) {
   xAxis.setAttribute('y1', height - padding);
   xAxis.setAttribute('x2', width - padding);
   xAxis.setAttribute('y2', height - padding);
-  xAxis.setAttribute('stroke', '#444');
+  xAxis.setAttribute('stroke', '#666');
   xAxis.setAttribute('stroke-width', '1');
 
   // Y axis
@@ -50,7 +50,7 @@ function renderXPOverTime(transactions) {
   yAxis.setAttribute('y1', padding);
   yAxis.setAttribute('x2', padding);
   yAxis.setAttribute('y2', height - padding);
-  yAxis.setAttribute('stroke', '#444');
+  yAxis.setAttribute('stroke', '#666');
   yAxis.setAttribute('stroke-width', '1');
 
   // X axis label
@@ -116,7 +116,7 @@ function renderXPByProject(transactions) {
   xAxis.setAttribute('y1', height - padding);
   xAxis.setAttribute('x2', width - padding);
   xAxis.setAttribute('y2', height - padding);
-  xAxis.setAttribute('stroke', '#444');
+  xAxis.setAttribute('stroke', '#666');
   xAxis.setAttribute('stroke-width', '1');
 
   // Y axis
@@ -125,7 +125,7 @@ function renderXPByProject(transactions) {
   yAxis.setAttribute('y1', padding);
   yAxis.setAttribute('x2', padding);
   yAxis.setAttribute('y2', height - padding);
-  yAxis.setAttribute('stroke', '#444');
+  yAxis.setAttribute('stroke', '#666');
   yAxis.setAttribute('stroke-width', '1');
 
   // X axis label
