@@ -26,3 +26,18 @@ async function getUser() {
 
   return graphqlQuery(query);
 }
+
+async function getUserResults() {
+  const query = `{
+    result {
+      id
+      grade
+      user {
+        id
+        login
+      }
+    }
+  }`;
+
+  return graphqlQuery(query);
+}
