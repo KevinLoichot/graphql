@@ -5,8 +5,8 @@
   --color-text: #f0f0f0;
   --color-muted: #666;
   --color-accent: #7c6ff7;
-  --color-accent-light: #a78bfa;
-  --color-label: #818cf8;
+  --color-accent-light: #2c57f3;
+  --color-label: #809df4;
 }
 
 * {
@@ -17,9 +17,9 @@
 
 body {
   min-height: 100vh;
-  background-color: #0f0f0f;
+  background-color: var(--color-bg);
   font-family: 'Segoe UI', sans-serif;
-  color: #f0f0f0;
+  color: var(--color-text);
 }
 
 body.login-page {
@@ -29,7 +29,7 @@ body.login-page {
 }
 
 .login-container {
-  background-color: #1a1a1a;
+  background-color: var(--color-surface);
   padding: 2.5rem 2rem;
   border-radius: 8px;
   width: 100%;
@@ -54,24 +54,24 @@ form {
 input {
   padding: 0.75rem 1rem;
   border-radius: 6px;
-  border: 1px solid #2e2e2e;
+  border: 1px solid var(--color-border);
   background-color: #111;
-  color: #f0f0f0;
+  color: var(--color-text);
   font-size: 0.95rem;
   outline: none;
   transition: border-color 0.2s;
 }
 
 input:focus {
-  border-color: #555;
+  border-color: var(--color-accent);
 }
 
 button[type='submit'] {
   padding: 0.75rem;
   border-radius: 6px;
   border: none;
-  background-color: #f0f0f0;
-  color: #0f0f0f;
+  background-color: var(--color-accent);
+  color: var(--color-text);
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
@@ -79,7 +79,7 @@ button[type='submit'] {
 }
 
 button[type='submit']:hover {
-  background-color: #d4d4d4;
+  background-color: var(--color-accent-light);
 }
 
 .error {
@@ -103,28 +103,29 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: #1a1a1a;
-  border-bottom: 1px solid #2e2e2e;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
 }
 
 header h1 {
   font-size: 1.2rem;
   font-weight: 600;
+  color: var(--color-accent-light);
 }
 
 header button {
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  border: 1px solid #2e2e2e;
+  border: 1px solid var(--color-border);
   background-color: transparent;
-  color: #f0f0f0;
+  color: var(--color-text);
   font-size: 0.85rem;
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
 header button:hover {
-  background-color: #2e2e2e;
+  background-color: var(--color-border);
 }
 
 main {
@@ -144,20 +145,24 @@ main {
 }
 
 section {
-  background-color: #1a1a1a;
+  background-color: var(--color-surface);
   border-radius: 8px;
   padding: 1.5rem;
+  border: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
 section h2 {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  color: #aaa;
+  color: var(--color-accent-light);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
 section p {
@@ -168,7 +173,7 @@ section p {
 
 .label {
   font-size: 0.75rem;
-  color: #666;
+  color: var(--color-label);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -176,7 +181,7 @@ section p {
 .value {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #f0f0f0;
+  color: var(--color-text);
 }
 
 svg {
