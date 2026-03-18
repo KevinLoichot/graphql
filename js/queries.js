@@ -15,3 +15,14 @@ async function graphqlQuery(query, variables = {}) {
   const result = await response.json();
   return result.data;
 }
+
+async function getUser() {
+  const query = `{
+    user {
+      id
+      login
+    }
+  }`;
+
+  return graphqlQuery(query);
+}
