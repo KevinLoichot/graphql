@@ -6,3 +6,12 @@ function renderUserInfo(user) {
     <p>Login: ${user.login}</p>
   `;
 }
+
+function renderXP(transactions) {
+  const total = transactions.reduce((sum, t) => sum + t.amount, 0);
+  const section = document.getElementById('xp');
+  section.innerHTML = `
+    <h2>XP</h2>
+    <p>Total XP: ${total}</p>
+  `;
+}
