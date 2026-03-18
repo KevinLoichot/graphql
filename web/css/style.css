@@ -77,3 +77,38 @@ button[type='submit']:hover {
 .hidden {
   display: none;
 }
+
+/* --- Profile page --- */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #2e2e2e;
+}
+
+header h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+header button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #2e2e2e;
+  background-color: transparent;
+  color: #f0f0f0;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+header button:hover {
+  background-color: #2e2e2e;
+}
