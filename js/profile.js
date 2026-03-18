@@ -25,3 +25,18 @@ function renderAudits(user) {
     <p>Received: ${user.totalDown}</p>
   `;
 }
+
+async function init() {
+  if (!localStorage.getItem('jwt')) {
+    window.location.href = 'index.html';
+    return;
+  }
+
+  const userData = await getUser();
+  const user = userData.user[0];
+  renderUserInfo(user);
+  renderAudits(user);
+
+  const xpData = await getXP();
+  renderXP(xpData.transaction);
+}
