@@ -3,8 +3,8 @@ function renderUserInfo(user) {
   const section = document.getElementById('user-info');
   section.innerHTML = `
     <h2>User Info</h2>
-    <p>ID: ${user.id}</p>
-    <p>Login: ${user.login}</p>
+    <p><span class='label'>ID</span><span class='value'>${user.id}</span></p>
+    <p><span class='label'>Login</span><span class='value'>${user.login}</span></p>
   `;
 }
 
@@ -14,7 +14,7 @@ function renderXP(transactions) {
   const section = document.getElementById('xp');
   section.innerHTML = `
     <h2>XP</h2>
-    <p>Total XP: ${total}</p>
+    <p><span class='label'>Total</span><span class='value'>${total.toLocaleString()} xp</span></p>
   `;
 }
 
@@ -23,9 +23,9 @@ function renderAudits(user) {
   const section = document.getElementById('audits');
   section.innerHTML = `
     <h2>Audits</h2>
-    <p>Audit ratio: ${user.auditRatio.toFixed(2)}</p>
-    <p>Done: ${user.totalUp}</p>
-    <p>Received: ${user.totalDown}</p>
+    <p><span class='label'>Ratio</span><span class='value'>${user.auditRatio.toFixed(2)}</span></p>
+    <p><span class='label'>Done</span><span class='value'>${user.totalUp.toLocaleString()} xp</span></p>
+    <p><span class='label'>Received</span><span class='value'>${user.totalDown.toLocaleString()} xp</span></p>
   `;
 }
 
