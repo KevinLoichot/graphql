@@ -6,12 +6,15 @@
 
 body {
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #0f0f0f;
   font-family: 'Segoe UI', sans-serif;
   color: #f0f0f0;
+}
+
+body.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-container {
