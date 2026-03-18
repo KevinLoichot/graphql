@@ -18,4 +18,4 @@ A personal profile page that queries and displays school data via the GraphQL AP
 
 ## Hosting
 
-Hosted on: https://zone01normandie.org/git/kloichot/graphql.git
+Hosted on: https://kevinloichot.github.io/graphql/

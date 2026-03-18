@@ -17,9 +17,9 @@ Personal conventions used on this solo project.
 ## Git Workflow
 
 ```bash
-# 1. Always start from an up-to-date main
-git checkout main
-git pull origin main
+# 1. Always start from an up-to-date dev
+git checkout dev
+git pull origin dev
 
 # 2. Create a branch following the naming convention
 git checkout -b feat/feature-name
@@ -28,28 +28,43 @@ git checkout -b feat/feature-name
 git add path/to/file
 git commit -m "feat(scope): short description"
 
-# 4. Push and merge into main when stable
+# 4. Push and merge into dev when stable
 git push origin feat/feature-name
-git checkout main
+git checkout dev
 git merge feat/feature-name
+
+# 5. Merge dev into main when everything is stable, then deploy
+git checkout main
+git merge dev
+git push origin main   # Zone01 Gitea
+git push github main   # GitHub Pages (deployment only)
 ```
 
 ### Branch strategy
 
 ```
 main  ← stable branch
- ├── feat/login
- ├── feat/graphql-queries
- ├── feat/svg-graphs
- ├── fix/jwt-expiry
- └── docs/readme
+└── dev  ← main development branch
+     ├── feat/login
+     ├── feat/graphql-queries
+     ├── feat/svg-graphs
+     ├── fix/jwt-expiry
+     └── docs/readme
 ```
+
+### Remotes
+
+| Remote   | URL                                              | Usage                        |
+| -------- | ------------------------------------------------ | ---------------------------- |
+| `origin` | zone01normandie.org/git/kloichot/graphql         | Development (all branches)   |
+| `github` | github.com/KevinLoichot/graphql                  | Deployment only (main only)  |
 
 **Rules:**
 
-- Never work directly on `main`
-- Each feature / fix gets its own branch
-- Merge into `main` only when functional
+- Never work directly on `main` or `dev`
+- Each feature / fix gets its own branch from `dev`
+- Merge into `dev` when functional, into `main` when stable
+- Only `main` is pushed to `github`
 
 ---
 

@@ -53,25 +53,12 @@
 | Statut | Durée | Tâche |
 |--------|-------|-------|
 | ✅     | 2h    | Amélioration UI/UX (typographie, couleurs, mise en page, responsive) |
-| ⬜     | 1h    | Tests de toutes les questions d'audit (fonctionnel + général) |
-| ⬜     | 0.5h  | Correction des bugs identifiés lors des tests |
+| ✅     | 1h    | Tests de toutes les questions d'audit (fonctionnel + général) |
+| ✅     | 0.5h  | Correction des bugs identifiés lors des tests |
 | ✅     | 2h    | Hébergement (GitHub Pages ou Netlify) + configuration du domaine |
 | ✅     | 1.5h  | Tests finaux sur le domaine hébergé (accès, login, profil, graphiques) |
 
 **Objectif de fin de journée :** Site en ligne, toutes les questions d'audit validées.
-
----
-
-## Jour 5 — 20 mars (Bonus — optionnel)
-
-| Statut | Durée | Tâche |
-|--------|-------|-------|
-| ⬜     | 1.5h  | Section(s) supplémentaire(s) au-delà des 3 obligatoires |
-| ⬜     | 2h    | Graphique(s) supplémentaire(s) (ex : ratio PASS/FAIL, tentatives par exercice) |
-| ⬜     | 2h    | Création et intégration d'un GraphiQL maison |
-| ⬜     | 1.5h  | Finitions UI, animations SVG, polish général |
-
-**Objectif de fin de journée :** Bonus cochés, UI soignée.
 
 ---
 
@@ -83,7 +70,6 @@
 | 2    | 17 mars  | GraphQL + Profil          | 3 sections profil avec vraies données |
 | 3    | 18 mars  | Graphiques SVG            | 2 graphiques SVG opérationnels        |
 | 4    | 19 mars  | UI/UX + Hébergement       | Site en ligne + audit validé          |
-| 5    | 20 mars  | Bonus                     | Points bonus cochés                   |
 
 ---
 
