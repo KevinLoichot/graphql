@@ -47,6 +47,8 @@ async function init() {
 
   const xpData = await getXP();
   renderXP(xpData.transaction);
+  renderXPOverTime(xpData.transaction);
+  renderXPByProject(xpData.transaction);
 }
 
 init();
