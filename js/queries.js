@@ -41,3 +41,15 @@ async function getUserResults() {
 
   return graphqlQuery(query);
 }
+
+async function getObjectById(id) {
+  const query = `{
+    object(where: { id: { _eq: ${id} } }) {
+      id
+      name
+      type
+    }
+  }`;
+
+  return graphqlQuery(query);
+}
