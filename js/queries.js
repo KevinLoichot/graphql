@@ -37,6 +37,21 @@ async function getUser() {
   return graphqlQuery(query);
 }
 
+// Fetch all XP transactions for the authenticated user
+async function getXP() {
+  const query = `{
+    transaction(where: { type: { _eq: "xp" } }) {
+      amount
+      createdAt
+      object {
+        name
+      }
+    }
+  }`;
+
+  return graphqlQuery(query);
+}
+
 // Nested query — fetch results with their associated user info
 async function getUserResults() {
   const query = `{
