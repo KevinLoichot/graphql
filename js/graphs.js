@@ -110,6 +110,48 @@ function renderXPByProject(transactions) {
 
   const svg = createSVG(width, height);
 
+  // X axis
+  const xAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+  xAxis.setAttribute('x1', padding);
+  xAxis.setAttribute('y1', height - padding);
+  xAxis.setAttribute('x2', width - padding);
+  xAxis.setAttribute('y2', height - padding);
+  xAxis.setAttribute('stroke', '#444');
+  xAxis.setAttribute('stroke-width', '1');
+
+  // Y axis
+  const yAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+  yAxis.setAttribute('x1', padding);
+  yAxis.setAttribute('y1', padding);
+  yAxis.setAttribute('x2', padding);
+  yAxis.setAttribute('y2', height - padding);
+  yAxis.setAttribute('stroke', '#444');
+  yAxis.setAttribute('stroke-width', '1');
+
+  // X axis label
+  const xLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  xLabel.setAttribute('x', width / 2);
+  xLabel.setAttribute('y', height - 4);
+  xLabel.setAttribute('text-anchor', 'middle');
+  xLabel.setAttribute('font-size', '11');
+  xLabel.setAttribute('fill', '#818cf8');
+  xLabel.textContent = 'Projects';
+
+  // Y axis label
+  const yLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+  yLabel.setAttribute('x', -(height / 2));
+  yLabel.setAttribute('y', 12);
+  yLabel.setAttribute('text-anchor', 'middle');
+  yLabel.setAttribute('font-size', '11');
+  yLabel.setAttribute('fill', '#818cf8');
+  yLabel.setAttribute('transform', 'rotate(-90)');
+  yLabel.textContent = 'XP';
+
+  svg.appendChild(xAxis);
+  svg.appendChild(yAxis);
+  svg.appendChild(xLabel);
+  svg.appendChild(yLabel);
+
   entries.forEach(([name, xp], i) => {
     const barHeight = ((xp / maxXP) * (height - padding * 2));
     const x = padding + i * barWidth;
@@ -120,7 +162,7 @@ function renderXPByProject(transactions) {
     rect.setAttribute('y', y);
     rect.setAttribute('width', barWidth - 8);
     rect.setAttribute('height', barHeight);
-    rect.setAttribute('fill', '#f0f0f0');
+    rect.setAttribute('fill', '#7c6ff7');
 
     // Project name label below the bar
     const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
