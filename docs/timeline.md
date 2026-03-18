@@ -55,8 +55,8 @@
 | ✅     | 2h    | Amélioration UI/UX (typographie, couleurs, mise en page, responsive) |
 | ⬜     | 1h    | Tests de toutes les questions d'audit (fonctionnel + général) |
 | ⬜     | 0.5h  | Correction des bugs identifiés lors des tests |
-| ⬜     | 2h    | Hébergement (GitHub Pages ou Netlify) + configuration du domaine |
-| ⬜     | 1.5h  | Tests finaux sur le domaine hébergé (accès, login, profil, graphiques) |
+| ✅     | 2h    | Hébergement (GitHub Pages ou Netlify) + configuration du domaine |
+| ✅     | 1.5h  | Tests finaux sur le domaine hébergé (accès, login, profil, graphiques) |
 
 **Objectif de fin de journée :** Site en ligne, toutes les questions d'audit validées.
 
@@ -90,18 +90,18 @@
 ## Checklist audit
 
 ### Fonctionnel
-- [ ] Login invalide → message d'erreur approprié
-- [ ] Login valide → accès au profil
-- [ ] Profil avec 3 sections distinctes (données vérifiables via GraphiQL)
-- [ ] Section statistiques avec au moins 2 graphiques SVG
-- [ ] Graphiques affichant des données exactes
-- [ ] Profil accessible depuis le domaine hébergé
-- [ ] Logout fonctionnel
+- [x] Login invalide → message d'erreur approprié
+- [x] Login valide → accès au profil
+- [x] Profil avec 3 sections distinctes (données vérifiables via GraphiQL)
+- [x] Section statistiques avec au moins 2 graphiques SVG
+- [x] Graphiques affichant des données exactes
+- [x] Profil accessible depuis le domaine hébergé
+- [x] Logout fonctionnel
 
 ### Général
-- [ ] Requête normale utilisée
-- [ ] Requête imbriquée (nested) utilisée
-- [ ] Requête avec arguments utilisée
+- [x] Requête normale utilisée
+- [x] Requête imbriquée (nested) utilisée
+- [x] Requête avec arguments utilisée
 
 ### Bonus
 - [ ] Sections d'info supplémentaires
