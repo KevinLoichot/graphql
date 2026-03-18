@@ -1,3 +1,4 @@
+// Render user id and login into the user-info section
 function renderUserInfo(user) {
   const section = document.getElementById('user-info');
   section.innerHTML = `
@@ -7,6 +8,7 @@ function renderUserInfo(user) {
   `;
 }
 
+// Compute total XP from transactions and render it into the xp section
 function renderXP(transactions) {
   const total = transactions.reduce((sum, t) => sum + t.amount, 0);
   const section = document.getElementById('xp');
@@ -16,6 +18,7 @@ function renderXP(transactions) {
   `;
 }
 
+// Render audit ratio, total done and total received into the audits section
 function renderAudits(user) {
   const section = document.getElementById('audits');
   section.innerHTML = `
@@ -26,6 +29,11 @@ function renderAudits(user) {
   `;
 }
 
+/*
+  Entry point for the profile page.
+  Redirects to login if no JWT is found.
+  Fetches user data and XP, then renders all sections.
+*/
 async function init() {
   if (!localStorage.getItem('jwt')) {
     window.location.href = 'index.html';
