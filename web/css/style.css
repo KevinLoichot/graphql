@@ -117,7 +117,7 @@ header button:hover {
 }
 
 main {
-  margin-top: 5rem;
+  margin: 5rem auto 2rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
