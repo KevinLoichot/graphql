@@ -22,6 +22,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Prepare deploy folder
+        run: |
+          cp -r js web/js
+
       - name: Upload web/ folder
         uses: actions/upload-pages-artifact@v3
         with:
