@@ -12,6 +12,7 @@ function renderUserInfo(user) {
 function renderXP(transactions) {
   const groups = {};
   for (const t of transactions) {
+    if (/piscine-js/i.test(t.path)) console.log(t.path, t.amount);
     const path = t.path || '';
     let category;
     if (/piscine/i.test(path)) {
