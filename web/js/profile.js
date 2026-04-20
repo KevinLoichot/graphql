@@ -13,6 +13,7 @@ function renderXP(transactions) {
   const groups = {};
   for (const t of transactions) {
     const path = t.path || '';
+    if (/piscine-go/i.test(path)) console.log(path, t.amount);
     if (/piscine-[^/]+$/.test(path)) continue;
     let category;
     if (/piscine/i.test(path)) {
