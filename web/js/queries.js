@@ -44,6 +44,7 @@ async function getXP() {
       amount
       createdAt
       objectId
+      path
       object {
         name
       }
