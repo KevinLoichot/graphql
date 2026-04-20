@@ -12,8 +12,8 @@ function renderUserInfo(user) {
 function renderXP(transactions) {
   const groups = {};
   for (const t of transactions) {
-    if (/piscine-js/i.test(t.path)) console.log(t.path, t.amount);
     const path = t.path || '';
+    if (/piscine-[^/]+$/.test(path)) continue;
     let category;
     if (/piscine/i.test(path)) {
       const match = path.match(/piscine-([^/]+)/i);
@@ -24,7 +24,8 @@ function renderXP(transactions) {
     groups[category] = (groups[category] || 0) + t.amount;
   }
 
-  const total = transactions.reduce((sum, t) => sum + t.amount, 0);
+  const filtered = transactions.filter(t => !/piscine-[^/]+$/.test(t.path || ''));
+  const total = filtered.reduce((sum, t) => sum + t.amount, 0);
   const rows = Object.entries(groups)
     .sort((a, b) => b[1] - a[1])
     .map(([label, xp]) => `<p><span class='label'>${label}</span><span class='value'>${xp.toLocaleString()} xp</span></p>`)
