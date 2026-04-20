@@ -13,8 +13,7 @@ function renderXP(transactions) {
   const groups = {};
   for (const t of transactions) {
     const path = t.path || '';
-    if (/piscine-go/i.test(path)) console.log(path, t.amount);
-    if (/piscine-[^/]+$/.test(path)) continue;
+    if (/\/div-01\/piscine-[^/]+$/.test(path)) continue;
     let category;
     if (/piscine/i.test(path)) {
       const match = path.match(/piscine-([^/]+)/i);
@@ -25,7 +24,7 @@ function renderXP(transactions) {
     groups[category] = (groups[category] || 0) + t.amount;
   }
 
-  const filtered = transactions.filter(t => !/piscine-[^/]+$/.test(t.path || ''));
+  const filtered = transactions.filter(t => !(/\/div-01\/piscine-[^/]+$/.test(t.path || '')));
   const total = filtered.reduce((sum, t) => sum + t.amount, 0);
   const rows = Object.entries(groups)
     .sort((a, b) => b[1] - a[1])
